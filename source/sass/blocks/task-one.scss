@@ -1,0 +1,50 @@
+.task-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  max-width: 1288px;
+  width: 100%;
+  min-width: 320px;
+
+  min-height: 592px;
+
+  border-radius: 8px;
+
+  background-color: $color-magnolia;
+
+  margin-top: 32px;
+
+  @include vp--1366 {
+    max-width: 960px;
+    min-height: 582px;
+  }
+
+  @include vp--320 {
+    max-width: 320px;
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
+
+  &__category {
+    margin-right: 48px;
+    margin-top: 20px;
+
+    max-width: 33%;
+
+    @include vp--1366 {
+      margin-right: 32px;
+    }
+
+    @include vp--320 {
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

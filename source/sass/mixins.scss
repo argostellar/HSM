@@ -6,52 +6,46 @@
 
 // Desktop first
 
-@mixin viewport--xl {
-  @media (max-width: $viewport--xxl - 1) {
+// desktop
+
+@mixin vp--1920 {
+  @media (max-width: $vp--1920) {
     @content;
   }
 }
 
-@mixin viewport--lg {
-  @media (max-width: $viewport--xl - 1) {
+@mixin vp--1680 {
+  @media (max-width: $vp--1680) {
     @content;
   }
 }
 
-@mixin viewport--md {
-  @media (max-width: $viewport--lg - 1) {
+// notebook
+
+@mixin vp--1366 {
+  @media (max-width: $vp--1366) {
     @content;
   }
 }
 
-@mixin viewport--sm {
-  @media (max-width: $viewport--md - 1) {
+// mobile
+
+@mixin vp--767 {
+  @media (max-width: $vp--768 - 1) {
     @content;
   }
 }
 
-// Mobile first
 
-/* @mixin viewport--md {
-  @media (min-width: $viewport--md) {
+@mixin vp--360 {
+  @media (max-width: $vp--360) {
     @content;
   }
 }
 
-@mixin viewport--lg {
-  @media (min-width: $viewport--lg) {
+@mixin vp--320 {
+  @media (max-width: $vp--320) {
     @content;
   }
 }
 
-@mixin viewport--xl {
-  @media (min-width: $viewport--xl) {
-    @content;
-  }
-}
-
-@mixin viewport--xxl {
-  @media (min-width: $viewport--xxl) {
-    @content;
-  }
-} */

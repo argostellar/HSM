@@ -1,75 +1,188 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-  @@include("source/html/base/head.html")
-  <title>Список страниц</title>
-
-  <style>
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-  </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тестовое задание Hearst Shkulev Media и ИнтерМедиаГруп, Группа компаний">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
   <main>
-    <div class="container">
-      <img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-      <h1>Список страниц и компонентов</h1>
-      <ol>
-        <li>
-          <a href="components.html">UI Kit — components.html</a>
-        </li>
-        <li>
-          <a href="main.html">Главная — main.html</a>
-        </li>
-        <li>
-          <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу</a>
-        </li>
-      </ol>
-    </div>
+    <h1 class="visually-hidden">Тестовое задание</h1>
+    <section class="task-one container">
+      <div class="task-one__category category">
+        <h2 class="category__title">Он и она</h2>
+        <div class="category__main-article main-article">
+          <a href="#main-article" class="main-article__link">
+            <div class="main-article__img-wrapper">
+              <picture>
+                <!-- WEBP -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-1-note@1x.webp 1x, img/content/article-img-1-note@2x.webp 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/content/article-img-1-mobile@1x.webp 1x, img/content/article-img-1-mobile@2x.webp 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <source type="image/webp" srcset="img/content/article-img-1-desk@1x.webp 1x, img/content/article-img-1-desk@2x.webp 2x">
+                <!-- PNG -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-1-note@1x.png 1x, img/content/article-img-1-note@2x.png 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source media="(max-width: 320px)" srcset="img/content/article-img-1-mobile@1x.png 1x, img/content/article-img-1-mobile@2x.png 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <img src="img/content/article-img-1-desk@1x.png" srcset="img/content/article-img-1-desk@2x.png 2x" width="360" height="216" alt="Изображение мужчины и женщины" decoding="async" loading="lazy">
+              </picture>
+            </div>
+            <h3 class="main-article__title">10 звезд, которые любили простых парней, но замуж за них не пошли</h3>
+          </a>
+        </div>
+        <div class="category__sub-articles sub-articles">
+          <ul class="sub-articles__list">
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-1@1x.webp 1x, img/content/article-small-img-1@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-1@1x.png" srcset="img/content/article-small-img-1@2x.png 2x" width="80" height="80" alt="Изображение романтической пары" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">Кино и реальность: как бы развивались отношения на самом деле</p>
+              </a>
+            </li>
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-4@1x.webp 1x, img/content/article-small-img-4@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-4@1x.png" srcset="img/content/article-small-img-4@2x.png 2x" width="80" height="80" alt="Изображение девушки в автомобиле" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">7 привычек, которые важно воспитать в себе до замужества</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="task-one__category category">
+        <h2 class="category__title">Дети</h2>
+        <div class="category__main-article main-article">
+          <a href="#main-article" class="main-article__link">
+            <div class="main-article__img-wrapper">
+              <picture>
+                <!-- WEBP -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-2-note@1x.webp 1x, img/content/article-img-2-note@2x.webp 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/content/article-img-2-mobile@1x.webp 1x, img/content/article-img-2-mobile@2x.webp 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <source type="image/webp" srcset="img/content/article-img-2-desk@1x.webp 1x, img/content/article-img-2-desk@2x.webp 2x">
+                <!-- PNG -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-2-note@1x.png 1x, img/content/article-img-2-note@2x.png 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source media="(max-width: 320px)" srcset="img/content/article-img-2-mobile@1x.png 1x, img/content/article-img-2-mobile@2x.png 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <img src="img/content/article-img-2-desk@1x.png" srcset="img/content/article-img-2-desk@2x.png 2x" width="360" height="216" alt="Изображение матери и дочери" decoding="async" loading="lazy">
+              </picture>
+            </div>
+            <h3 class="main-article__title">И тату, и пирсинг: эксперименты со внешностью звездных детей</h3>
+          </a>
+        </div>
+        <div class="category__sub-articles sub-articles">
+          <ul class="sub-articles__list">
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-2@1x.webp 1x, img/content/article-small-img-2@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-2@1x.png" srcset="img/content/article-small-img-2@2x.png 2x" width="80" height="80" alt="Изображение ребёнка" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">5 навыков и качеств, которых гаджеты лишили наших детей</p>
+              </a>
+            </li>
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-5@1x.webp 1x, img/content/article-small-img-5@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-5@1x.png" srcset="img/content/article-small-img-5@2x.png 2x" width="80" height="80" alt="Изображение ребёнка и родителя" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">7 самых вредных привычек молодых родителей</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="task-one__category category">
+        <h2 class="category__title">Стиль жизни</h2>
+        <div class="category__main-article main-article">
+          <a href="#main-article" class="main-article__link">
+            <div class="main-article__img-wrapper">
+              <picture>
+                <!-- WEBP -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-3-note@1x.webp 1x, img/content/article-img-3-note@2x.webp 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/content/article-img-3-mobile@1x.webp 1x, img/content/article-img-3-mobile@2x.webp 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <source type="image/webp" srcset="img/content/article-img-3-desk@1x.webp 1x, img/content/article-img-3-desk@2x.webp 2x">
+                <!-- PNG -->
+                <!-- 1х: 288px; 2x: 576px -->
+                <source media="(max-width: 1366px) and (min-width: 360px)" srcset="img/content/article-img-3-note@1x.png 1x, img/content/article-img-3-note@2x.png 2x">
+                <!-- 1х: 304px; 2x: 608px -->
+                <source media="(max-width: 320px)" srcset="img/content/article-img-3-mobile@1x.png 1x, img/content/article-img-3-mobile@2x.png 2x">
+                <!-- 1х: 360px; 2x: 720px -->
+                <img src="img/content/article-img-3-desk@1x.png" srcset="img/content/article-img-3-desk@2x.png 2x" width="360" height="216" alt="Изображение улыбающейся женщины" decoding="async" loading="lazy">
+              </picture>
+            </div>
+            <h3 class="main-article__title">Стоит ли отказываться от социальных сетей на неделю</h3>
+          </a>
+        </div>
+        <div class="category__sub-articles sub-articles">
+          <ul class="sub-articles__list">
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-3@1x.webp 1x, img/content/article-small-img-3@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-3@1x.png" srcset="img/content/article-small-img-3@2x.png 2x" width="80" height="80" alt="Изображение девушки на прогулке" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">В России установили один из самых романтичных рекордов</p>
+              </a>
+            </li>
+            <li class="sub-articles__item">
+              <a href="#sub-article" class="sub-articles__link">
+                <div class="sub-articles__img-wrapper">
+                  <picture>
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/article-small-img-6@1x.webp 1x, img/content/article-small-img-6@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/article-small-img-6@1x.png" srcset="img/content/article-small-img-6@2x.png 2x" width="80" height="80" alt="Изображение девушки, дарящей подарок мужчине" decoding="async" loading="lazy">
+                  </picture>
+                </div>
+                <p class="sub-articles__title">Что подарить мужчине, чтобы ему это понравилось: 100+ идей</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="task-two">
+      <h2 class="visually-hidden">Задание 2</h2>
+    </section>
   </main>
-
 </body>
 </html>

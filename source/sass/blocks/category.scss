@@ -1,0 +1,40 @@
+.category {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 360px;
+
+  @include vp--1366 {
+    max-width: 288px;
+  }
+
+  @include vp--320 {
+    max-width: 304px;
+  }
+
+  &__title {
+    font-family: $font-family--montserrat;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: $color-alizarin;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 11px;
+    margin-bottom: 9px;
+
+    @include vp--1366 {
+      margin-bottom: 9px;
+    }
+
+    @include vp--320 {
+      max-width: 304px;
+    }
+  }
+}

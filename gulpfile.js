@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
@@ -88,7 +88,7 @@ const syncserver = () => {
     ui: false,
   });
 
-  gulp.watch('source/html/**/*.html', gulp.series(html, refresh));
+  gulp.watch('source/html/*.html', gulp.series(html, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));

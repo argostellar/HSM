@@ -1,0 +1,57 @@
+.main-article {
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__img-wrapper {
+    width: 360px;
+    height: 216px;
+
+    @include vp--1366 {
+      width: 288px;
+      height: 182px;
+    }
+
+    @include vp--320 {
+      width: 304px;
+      height: 182px;
+    }
+
+    img {
+      @include vp--1366 {
+        width: 288px;
+        height: 182px;
+      }
+
+      @include vp--320 {
+        width: 304px;
+        height: 182px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family--montserrat;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 9px;
+
+    max-width: 360px;
+
+    @include vp--1366 {
+      max-width: 288px;
+      min-height: 72px;
+    }
+
+    @include vp--320 {
+      max-width: 304px;
+    }
+  }
+}
