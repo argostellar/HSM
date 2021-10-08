@@ -1,0 +1,217 @@
+@property --opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0.6;
+}
+
+.lower-part {
+  position: relative;
+
+  @include vp--320 {
+    padding: 0 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+
+    // ошибка граф.дизайнера?
+    --border-width: calc(100% + 16px);
+    width: var(--border-width);
+    height: 2px;
+    // border-top: 2px dashed $color-white;
+
+    background-image: url("../img/sprite/empty-block.svg");
+    background-repeat: repeat;
+
+    @include vp--1366 {
+      width: 100%;
+    }
+
+    @include vp--320 {
+      top: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-top: 14px;
+    margin-bottom: -16px;
+
+    @include vp--1366 {
+      flex-wrap: nowrap;
+    }
+
+    @include vp--320 {
+      margin-top: 10px;
+    }
+  }
+
+  &__item {
+    // --opacity: 0.6;
+    padding: 16px;
+
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    max-width: 408px;
+    width: 100%;
+
+    min-height: 172px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    @include vp--1366 {
+      max-width: 456px;
+      min-width: 456px;
+    }
+
+    @include vp--320 {
+      min-width: 220px;
+      max-width: 220px;
+
+      margin-right: 8px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      border-radius: 8px;
+
+      background-color: rgba($color-black, var(--opacity));
+      transition: --opacity 0.6s;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      &::before {
+        --opacity: 0.3;
+      }
+    }
+
+    &--interviews {
+      background-image: url("../img/bg/category-1-initial.jpg");
+      background-position: 0 -50px;
+
+      @include vp--1366 {
+        background-position: 0 -67px;
+      }
+
+      @include vp--320 {
+        background-position: -19px 0;
+      }
+    }
+
+    &--personal-money {
+      background-image: url("../img/bg/category-2-initial.jpg");
+      background-position: 0 -51px;
+
+      @include vp--1366 {
+        background-position: 0 -67px;
+      }
+
+      @include vp--320 {
+        background-position: -19px 0;
+      }
+    }
+
+    &--weekend-films {
+      background-image: url("../img/bg/category-3-initial.jpg");
+      background-position: 0 -211px;
+
+      @include vp--1366 {
+        background-position: 0 -278px;
+      }
+
+      @include vp--320 {
+        background-position: -19px 0;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: text-shadow 0.3s;
+
+    &:hover,
+    &:focus {
+      text-shadow: 0 1px 1px $color-black;
+    }
+
+    &:active {
+      text-shadow: 0 -1px 1px $color-black;
+    }
+  }
+
+  &__article-counter {
+    font-family: $font-family--montserrat;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+
+    color: $color-white;
+
+    margin-top: 0;
+    margin-bottom: auto;
+
+    @include vp--320 {
+      margin-top: 1px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family--montserrat;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    color: $color-white;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: auto;
+    margin-bottom: -1px;
+
+    @include vp--1366 {
+      max-width: 340px;
+    }
+
+    @include vp--320 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

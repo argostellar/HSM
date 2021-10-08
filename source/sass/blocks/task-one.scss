@@ -15,6 +15,7 @@
   background-color: $color-magnolia;
 
   margin-top: 32px;
+  margin-bottom: 32px;
 
   @include vp--1366 {
     max-width: 960px;

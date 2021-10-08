@@ -1,0 +1,185 @@
+@property --btn-opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0.5;
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: relative;
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba($color-black, var(--btn-opacity));
+    transition: --btn-opacity 0.3s;
+
+    position: absolute;
+    content: "";
+    top: 62px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15.56px;
+      height: 2px;
+      background-color: $color-white;
+    }
+
+    &--prev {
+      left: 8px;
+
+      @include vp--1366 {
+        display: none;
+      }
+
+      &::before,
+      &::after {
+        left: 15px;
+      }
+
+      &::before {
+        top: 18px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 28px;
+        transform: rotate(45deg);
+      }
+    }
+
+    &--next {
+      right: 8px;
+
+      @include vp--1366 {
+        right: 24px;
+      }
+
+      @include vp--320 {
+        display: none;
+      }
+
+      &::before,
+      &::after {
+        left: 17px;
+      }
+
+      &::before {
+        top: 18px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 28px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      --btn-opacity: 0.8;
+    }
+
+    &:active {
+      --btn-opacity: 0.3;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp--320 {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-right: 16px;
+    margin-bottom: 24px;
+
+    @include vp--320 {
+      margin-bottom: 13px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include vp--1366 {
+        display: none;
+      }
+
+      @include vp--320 {
+        display: block;
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__link {
+    transition: text-shadow 0.3s;
+
+    &:hover,
+    &:focus {
+      text-shadow: 0 1px 1px $color-black;
+    }
+
+    &:active {
+      text-shadow: 0 -1px 1px $color-black;
+    }
+  }
+
+  &__img-wrapper {
+    width: 304px;
+    height: 172px;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    @include vp--1366 {
+      width: 300px;
+    }
+
+    img {
+      object-fit: fill;
+
+      width: 304px;
+      height: 172px;
+
+      @include vp--1366 {
+        width: 300px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family--montserrat;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+    color: $color-white;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 17px;
+    margin-bottom: 10px;
+
+    max-width: 304px;
+  }
+}

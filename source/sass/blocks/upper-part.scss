@@ -1,0 +1,102 @@
+.upper-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  @include vp--320 {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    max-width: 288px;
+    min-width: 288px;
+
+    margin-right: 24px;
+
+    position: relative;
+
+    @include vp--1366 {
+      min-width: 288px;
+    }
+
+    @include vp--320 {
+      min-height: 150px;
+      margin-bottom: 18px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 43px;
+
+      width: 150px;
+      height: 4px;
+
+      background-color: $color-white;
+
+      @include vp--320 {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family--montserrat;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: $color-white;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 4px;
+    margin-bottom: 10px;
+
+    @include vp--1366 {
+      margin-top: 10px;
+    }
+
+    @include vp--320 {
+      margin-top: 0;
+    }
+  }
+
+  &__counter {
+    font-family: $font-family--montserrat;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    margin-top: 15px;
+    margin-bottom: auto;
+
+    @include vp--320 {
+      margin-top: 7px;
+    }
+  }
+
+  &__articles {
+    margin-top: 4px;
+
+    @include vp--1366 {
+      margin-top: 10px;
+    }
+
+    @include vp--320 {
+      margin-top: 0;
+    }
+  }
+}
